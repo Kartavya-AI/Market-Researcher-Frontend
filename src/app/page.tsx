@@ -9,10 +9,10 @@ import VantaFog from "@/components/VantaFog";
 import { AuroraText } from "@/components/magicui/aurora-text";
 import Link from "next/link";
 import { ShimmerButton } from "@/components/magicui/shimmer-button";
-import gtmIllustration from "../../public/images/2df63f_cf537ca0b8254df79a53dae712b84510~mv2.avif";
+import researchIllustration from "../../public/images/Researcher_Empowers-HCZ_dOug.jpg";
 import { CardContent, CardHeader } from "@/components/ui/card";
 import { MagicCard } from "@/components/magicui/magic-card";
-import profile from '../../public/images/profile.jpg'
+import profile from "../../public/images/profile.jpg";
 import {
     Accordion,
     AccordionContent,
@@ -23,37 +23,36 @@ import { Marquee } from "@/components/magicui/marquee";
 
 const reviews = [
     {
-        name: "Arjun Malhotra",
-        username: "@arjun_founder",
-        body: "Entrepreneur Copilot helped me validate my startup idea and build a go-to-market plan in under an hour. Absolute game-changer for solo founders!"
+        name: "Rohan Mehta",
+        username: "@rohan_consulting",
+        body: "Researcher cut our market analysis time by 80%. The structured reports were client-ready without any extra editing.",
     },
     {
-        name: "Neha Gupta",
-        username: "@neha_g",
-        body: "The AI-driven customer segmentation was spot-on. We discovered niche audiences we had completely overlooked."
+        name: "Ananya Iyer",
+        username: "@ananya_academic",
+        body: "As part of an academic team, we used Researcher to synthesize literature from multiple sources. It saved us weeks of manual reading and summarizing.",
     },
     {
-        name: "Vikram Rao",
-        username: "@vikram_startup",
-        body: "Instead of spending weeks on market research, I had actionable insights and channel strategies ready in a single session."
+        name: "James Carter",
+        username: "@james_exec",
+        body: "The briefing reports are gold. I can walk into meetings fully prepared with accurate, up-to-date insights.",
     },
     {
-        name: "Sofia Khan",
-        username: "@sofia_k",
-        body: "We pivoted our product positioning based on the competitive analysis from Entrepreneur Copilot — and saw our conversions double."
+        name: "Priya Sharma",
+        username: "@priya_pm",
+        body: "Competitive intelligence is now effortless. Researcher identifies trends and gaps we would have easily missed.",
     },
     {
-        name: "Karan Patel",
-        username: "@karanp_growth",
-        body: "The outreach and content suggestions saved our team days of brainstorming. It felt like having a full-time GTM strategist in-house."
+        name: "Daniel Kim",
+        username: "@daniel_content",
+        body: "I create in-depth articles for tech blogs, and Researcher makes the process smoother by providing citations, charts, and well-organized points.",
     },
     {
-        name: "Emily Chen",
-        username: "@emily_builds",
-        body: "As a first-time founder, I had no idea where to start. Copilot walked me through every step and gave me the confidence to launch."
-    }
+        name: "Aisha Khan",
+        username: "@aisha_student",
+        body: "For my thesis, Researcher was like having a personal research assistant. The clarity and depth in the reports were unmatched.",
+    },
 ];
-
 
 const firstRow = reviews.slice(0, reviews.length / 2);
 const secondRow = reviews.slice(reviews.length / 2);
@@ -101,86 +100,87 @@ const ReviewCard = ({
 
 const steps = [
     {
-        title: "Step 1: Describe Your Startup Idea",
+        title: "Step 1: Define Your Research Goal",
         description:
-            "Begin by sharing your business concept, target market, and current stage. The Copilot uses this to tailor a GTM strategy specifically for you."
+            "Start by specifying your topic, questions, and desired depth — whether it’s market analysis, academic review, or competitive intelligence.",
     },
     {
-        title: "Step 2: Analyze Market & Competition",
+        title: "Step 2: Gather and Review Sources",
         description:
-            "The AI scans real-time market data, trends, and competitors to reveal gaps, opportunities, and positioning angles."
+            "Researcher searches across diverse web sources, proprietary databases, and knowledge repositories to collect relevant information.",
     },
     {
-        title: "Step 3: Define Ideal Customer Profiles",
+        title: "Step 3: Extract Key Insights",
         description:
-            "Get precise audience segments based on demographics, behavior, and buying patterns — so your targeting is laser-focused."
+            "The AI identifies trends, key findings, themes, and supporting evidence from your collected sources.",
     },
     {
-        title: "Step 4: Identify Core Value Proposition",
+        title: "Step 4: Summarize and Synthesize",
         description:
-            "Clarify your unique selling points and messaging that will resonate most with your chosen audience."
+            "Complex information is distilled into concise summaries, merging insights from multiple datasets into a coherent narrative.",
     },
     {
-        title: "Step 5: Build Your Acquisition Plan",
+        title: "Step 5: Structure Your Report",
         description:
-            "Receive actionable recommendations for channels, partnerships, and campaigns to drive awareness and conversions."
+            "Get a professionally formatted, sectioned report with inline citations, recommended charts, and tables.",
     },
     {
-        title: "Step 6: Launch & Track Progress",
+        title: "Step 6: Collaborate and Refine",
         description:
-            "Execute your GTM strategy with built-in progress tracking, automated feedback, and continuous optimization suggestions."
-    }
+            "Work with your team to annotate, edit, and finalize the report — with Researcher adapting style and depth for your audience.",
+    },
 ];
-
 
 export default function Home() {
     const { theme } = useTheme();
     return (
         <main className="mx-auto">
             <VantaFog />
-           <section className="mt-20 px-4 md:px-36 flex flex-col justify-center items-center text-center">
-    <div className="group mb-5 relative mx-auto flex items-center justify-center rounded-full px-4 py-1.5 shadow-[inset_0_-8px_10px_#8fdfff1f] transition-shadow duration-500 ease-out hover:shadow-[inset_0_-5px_10px_#8fdfff3f]">
-        <span
-            className={cn(
-                "absolute inset-0 block h-full w-full animate-gradient rounded-[inherit] bg-gradient-to-r from-[#ffaa40]/50 via-[#9c40ff]/50 to-[#ffaa40]/50 bg-[length:300%_100%] p-[1px]"
-            )}
-            style={{
-                WebkitMask:
-                    "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-                WebkitMaskComposite: "destination-out",
-                mask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-                maskComposite: "subtract",
-                WebkitClipPath: "padding-box",
-            }}
-        />
-        🚀
-        <hr className="mx-2 h-4 w-px shrink-0 bg-neutral-500" />
-        <AnimatedGradientText className="text-sm font-medium">
-            AI-Powered GTM Strategy Builder for Startup Founders
-        </AnimatedGradientText>
-        <ChevronRight className="ml-1 size-4 stroke-neutral-500 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
-    </div>
+            <section className="mt-20 px-4 md:px-36 flex flex-col justify-center items-center text-center">
+                <div className="group mb-5 relative mx-auto flex items-center justify-center rounded-full px-4 py-1.5 shadow-[inset_0_-8px_10px_#8fdfff1f] transition-shadow duration-500 ease-out hover:shadow-[inset_0_-5px_10px_#8fdfff3f]">
+                    <span
+                        className={cn(
+                            "absolute inset-0 block h-full w-full animate-gradient rounded-[inherit] bg-gradient-to-r from-[#ffaa40]/50 via-[#9c40ff]/50 to-[#ffaa40]/50 bg-[length:300%_100%] p-[1px]"
+                        )}
+                        style={{
+                            WebkitMask:
+                                "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                            WebkitMaskComposite: "destination-out",
+                            mask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                            maskComposite: "subtract",
+                            WebkitClipPath: "padding-box",
+                        }}
+                    />
+                    📚
+                    <hr className="mx-2 h-4 w-px shrink-0 bg-neutral-500" />
+                    <AnimatedGradientText className="text-sm font-medium">
+                        AI-Powered Research & Reporting Assistant
+                    </AnimatedGradientText>
+                    <ChevronRight className="ml-1 size-4 stroke-neutral-500 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
+                </div>
 
-    <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight text-primary mb-6">
-        Launch Your Startup <AuroraText>Faster & Smarter</AuroraText>  
-        with AI-Driven Go-To-Market Strategies
-    </h1>
+                <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight text-primary mb-6">
+                    Research <AuroraText>Smarter & Faster</AuroraText>{" "}
+                    with AI-Generated Decision-Ready Reports
+                </h1>
 
-    <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-8">
-        Instantly generate, refine, and execute a robust GTM plan tailored to your business idea — from market analysis and ideal customer profiles to acquisition channels and growth initiatives.
-    </p>
+                <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-8">
+                    Instantly search, analyze, and summarize diverse sources
+                    into a structured, professional report — complete with key
+                    findings, citations, and visual recommendations, tailored to
+                    your needs.
+                </p>
 
-    <div className="">
-        <Link href="/search">
-            <ShimmerButton className="shadow-2xl">
-                <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
-                    Build My GTM Plan
-                </span>
-            </ShimmerButton>
-        </Link>
-    </div>
-</section>
-
+                <div>
+                    <Link href="/search">
+                        <ShimmerButton className="shadow-2xl">
+                            <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
+                                Start My Research
+                            </span>
+                        </ShimmerButton>
+                    </Link>
+                </div>
+            </section>
 
             <section className="pt-20 lg:pt-32 pb-10 px-4 md:px-36 mx-auto">
                 <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
@@ -212,35 +212,36 @@ export default function Home() {
                 </div>
             </section>
 
-          <section className="flex mt-10 flex-col md:flex-row items-center justify-between px-4 md:px-36 py-12">
-    {/* Text Section */}
-    <div className="md:w-1/2 text-center md:text-left space-y-4 order-2 md:order-1">
-        <h2 className="text-3xl md:text-5xl font-bold text-primary">
-            Build and Launch Your Go-To-Market Strategy — Powered by AI.
-        </h2>
-        <p className="text-lg text-muted-foreground">
-            Entrepreneur Copilot helps you analyze your market, define your ideal customer, and create a step-by-step GTM plan — so you can launch faster, smarter, and with higher ROI.
-        </p>
-        <Link href="/search">
-            <ShimmerButton className="shadow-2xl">
-                <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
-                    Build My GTM Plan
-                </span>
-            </ShimmerButton>
-        </Link>
-    </div>
+           <section className="flex mt-10 flex-col md:flex-row items-center justify-between px-4 md:px-36 py-12">
+  {/* Text Section */}
+  <div className="md:w-1/2 text-center md:text-left space-y-4 order-2 md:order-1">
+    <h2 className="text-3xl md:text-5xl font-bold text-primary">
+      Conduct In-Depth Research & Generate Reports — Powered by AI.
+    </h2>
+    <p className="text-lg text-muted-foreground">
+      Researcher helps you search, analyze, and synthesize information from diverse sources into 
+      professional, decision-ready reports — complete with key findings, visual suggestions, and citations.
+    </p>
+    <Link href="/search">
+      <ShimmerButton className="shadow-2xl">
+        <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
+          Start My Research
+        </span>
+      </ShimmerButton>
+    </Link>
+  </div>
 
-    {/* Image Section */}
-    <div className="md:w-1/2 mt-10 md:mt-0 order-1 md:order-2 flex justify-center">
-        <Image
-            src={gtmIllustration} // Replace with your GTM strategy illustration path
-            alt="AI-Powered Go-To-Market Strategy"
-            className="w-full max-w-md h-96 object-cover"
-            width={10}
-            height={10}
-            unoptimized
-        />
-    </div>
+  {/* Image Section */}
+  <div className="md:w-1/2 mt-10 md:mt-0 order-1 md:order-2 flex justify-center">
+    <Image
+      src={researchIllustration} // Replace with your research/report generation illustration path
+      alt="AI-Powered Research & Reporting"
+      className="w-full max-w-md h-96 object-contain"
+      width={10}
+      height={10}
+      unoptimized
+    />
+  </div>
 </section>
 
 
@@ -259,114 +260,134 @@ export default function Home() {
                 </div>
             </section>
 
-            <section className="px-4 md:px-36 mt-20">
-    <Accordion
-        type="single"
-        collapsible
-        className="w-full"
-        defaultValue="item-1"
-    >
-        <h1 className="text-4xl font-bold">FAQ&apos;S</h1>
+           <section className="px-4 md:px-36 mt-20">
+  <Accordion
+    type="single"
+    collapsible
+    className="w-full"
+    defaultValue="item-1"
+  >
+    <h1 className="text-4xl font-bold">FAQ&apos;S</h1>
 
-        <AccordionItem value="item-1">
-            <AccordionTrigger>
-                1. What is Entrepreneur Copilot?
-            </AccordionTrigger>
-            <AccordionContent className="flex flex-col gap-4 text-balance">
-                <p>
-                    Entrepreneur Copilot is an AI-powered platform that helps startup founders instantly create, refine, and execute robust go-to-market (GTM) strategies. It analyzes your idea, market, and target audience to deliver a personalized plan for launching and scaling successfully.
-                </p>
-            </AccordionContent>
-        </AccordionItem>
+    <AccordionItem value="item-1">
+      <AccordionTrigger>
+        1. What is Researcher?
+      </AccordionTrigger>
+      <AccordionContent className="flex flex-col gap-4 text-balance">
+        <p>
+          Researcher is an AI-powered platform that helps individuals and teams
+          perform thorough research and automatically produce structured,
+          decision-ready reports on any subject. It combines real-time web
+          search, data analysis, and intelligent summarization to save you
+          hours of work.
+        </p>
+      </AccordionContent>
+    </AccordionItem>
 
-        <AccordionItem value="item-2">
-            <AccordionTrigger>
-                2. How does it work?
-            </AccordionTrigger>
-            <AccordionContent className="flex flex-col gap-4 text-balance">
-                <p>
-                    Simply describe your startup idea and industry. The platform uses AI and real-time market data to recommend customer profiles, competitive positioning, acquisition strategies, and an actionable GTM roadmap tailored to your business.
-                </p>
-            </AccordionContent>
-        </AccordionItem>
+    <AccordionItem value="item-2">
+      <AccordionTrigger>
+        2. How does it work?
+      </AccordionTrigger>
+      <AccordionContent className="flex flex-col gap-4 text-balance">
+        <p>
+          Simply provide your topic or research question. Researcher searches
+          across diverse sources — including web content, academic papers, and
+          proprietary datasets — then extracts key findings, synthesizes
+          literature, and organizes it into a professional report with
+          citations and optional visuals.
+        </p>
+      </AccordionContent>
+    </AccordionItem>
 
-        <AccordionItem value="item-3">
-            <AccordionTrigger>
-                3. What kind of businesses can use it?
-            </AccordionTrigger>
-            <AccordionContent className="flex flex-col gap-4 text-balance">
-                <p>
-                    Entrepreneur Copilot works for solo founders, early-stage startups, accelerators, incubators, and even established businesses entering new markets or pivoting their GTM approach.
-                </p>
-            </AccordionContent>
-        </AccordionItem>
+    <AccordionItem value="item-3">
+      <AccordionTrigger>
+        3. Who can use it?
+      </AccordionTrigger>
+      <AccordionContent className="flex flex-col gap-4 text-balance">
+        <p>
+          Researcher is perfect for consultants, executives, academic teams,
+          product managers, content creators, and students — basically anyone
+          who needs accurate, well-structured insights quickly.
+        </p>
+      </AccordionContent>
+    </AccordionItem>
 
-        <AccordionItem value="item-4">
-            <AccordionTrigger>
-                4. Does it use real market data?
-            </AccordionTrigger>
-            <AccordionContent className="flex flex-col gap-4 text-balance">
-                <p>
-                    Yes. The platform integrates real-time market insights, industry trends, and competitive data to ensure your GTM strategy reflects the most up-to-date opportunities and challenges.
-                </p>
-            </AccordionContent>
-        </AccordionItem>
+    <AccordionItem value="item-4">
+      <AccordionTrigger>
+        4. Does it use real-time data?
+      </AccordionTrigger>
+      <AccordionContent className="flex flex-col gap-4 text-balance">
+        <p>
+          Yes. Researcher integrates real-time web results, industry databases,
+          and other trusted sources, ensuring your reports are built on the
+          most current and relevant information available.
+        </p>
+      </AccordionContent>
+    </AccordionItem>
 
-        <AccordionItem value="item-5">
-            <AccordionTrigger>
-                5. Can it help with customer targeting?
-            </AccordionTrigger>
-            <AccordionContent className="flex flex-col gap-4 text-balance">
-                <p>
-                    Absolutely. Entrepreneur Copilot recommends detailed ideal customer profiles (ICPs) and segments based on demographics, behavior, and purchase patterns, so your outreach is focused and effective.
-                </p>
-            </AccordionContent>
-        </AccordionItem>
+    <AccordionItem value="item-5">
+      <AccordionTrigger>
+        5. Can it summarize and synthesize complex topics?
+      </AccordionTrigger>
+      <AccordionContent className="flex flex-col gap-4 text-balance">
+        <p>
+          Absolutely. Researcher doesn’t just summarize — it identifies key
+          themes, compares findings across datasets, and synthesizes them into
+          a cohesive, easy-to-understand narrative.
+        </p>
+      </AccordionContent>
+    </AccordionItem>
 
-        <AccordionItem value="item-6">
-            <AccordionTrigger>
-                6. Does it suggest acquisition and growth strategies?
-            </AccordionTrigger>
-            <AccordionContent className="flex flex-col gap-4 text-balance">
-                <p>
-                    Yes. The platform generates channel recommendations, outreach ideas, content strategies, and growth initiatives, so you have a clear execution plan for acquiring and retaining customers.
-                </p>
-            </AccordionContent>
-        </AccordionItem>
+    <AccordionItem value="item-6">
+      <AccordionTrigger>
+        6. Does it support visual elements in reports?
+      </AccordionTrigger>
+      <AccordionContent className="flex flex-col gap-4 text-balance">
+        <p>
+          Yes. The platform can suggest charts, tables, and infographics to
+          help present data and insights more effectively in your reports.
+        </p>
+      </AccordionContent>
+    </AccordionItem>
 
-        <AccordionItem value="item-7">
-            <AccordionTrigger>
-                7. Can it track my GTM progress?
-            </AccordionTrigger>
-            <AccordionContent className="flex flex-col gap-4 text-balance">
-                <p>
-                    Yes. You can track execution milestones, measure results, and receive AI-driven optimization tips to adapt your GTM strategy as you go.
-                </p>
-            </AccordionContent>
-        </AccordionItem>
+    <AccordionItem value="item-7">
+      <AccordionTrigger>
+        7. Can multiple people collaborate on a report?
+      </AccordionTrigger>
+      <AccordionContent className="flex flex-col gap-4 text-balance">
+        <p>
+          Yes. Researcher supports collaborative research, allowing teams to
+          annotate, edit, and refine reports together in real time.
+        </p>
+      </AccordionContent>
+    </AccordionItem>
 
-        <AccordionItem value="item-8">
-            <AccordionTrigger>
-                8. Is Entrepreneur Copilot only for tech startups?
-            </AccordionTrigger>
-            <AccordionContent className="flex flex-col gap-4 text-balance">
-                <p>
-                    Not at all. It works for startups and businesses in any industry — from SaaS and e-commerce to manufacturing, services, and offline businesses — as long as you need a GTM plan.
-                </p>
-            </AccordionContent>
-        </AccordionItem>
+    <AccordionItem value="item-8">
+      <AccordionTrigger>
+        8. Is it only for academic research?
+      </AccordionTrigger>
+      <AccordionContent className="flex flex-col gap-4 text-balance">
+        <p>
+          Not at all. Researcher adapts to academic, business, or casual
+          contexts. Whether you need a literature review, market analysis, or
+          competitive intelligence, it formats the report accordingly.
+        </p>
+      </AccordionContent>
+    </AccordionItem>
 
-        <AccordionItem value="item-9">
-            <AccordionTrigger>
-                9. Is there a free version?
-            </AccordionTrigger>
-            <AccordionContent className="flex flex-col gap-4 text-balance">
-                <p>
-                    Core features like idea analysis and basic GTM planning are free. Advanced features — such as detailed market reports, custom acquisition plans, and progress tracking — may require a paid subscription.
-                </p>
-            </AccordionContent>
-        </AccordionItem>
-    </Accordion>
+    <AccordionItem value="item-9">
+      <AccordionTrigger>
+        9. Is there a free version?
+      </AccordionTrigger>
+      <AccordionContent className="flex flex-col gap-4 text-balance">
+        <p>
+          Core research and summarization features are free to use. Advanced
+          capabilities — like custom formatting, deep-dive datasets, and team
+          collaboration — may require a paid subscription.
+        </p>
+      </AccordionContent>
+    </AccordionItem>
+  </Accordion>
 </section>
 
         </main>
